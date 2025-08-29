@@ -1,20 +1,30 @@
 
+@import url("../../assets/global-styles/typography.css");
+
 .navigation-bar-grid {
   display: grid;
   grid-template-columns: 20%;   /* column takes 20% of container width */
   gap: 16px;
   padding: 16px;
-  height: 100vh;                /* full viewport height */
 }
 
-.box {
-  background: #38abee;
+.navigation-box {
+  background: var(--color-primary);
+  color: var(--color-font);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
-  color: #333;
   width: 100%;                  /* fill the grid column */
+  max-width: 200px;             /* max width */
+  min-width: 60px;              /* min width */
   aspect-ratio: 1 / 1;          /* perfect square */
+}
+
+
+
+
+.main-content-grid {
+  display: grid
 }
