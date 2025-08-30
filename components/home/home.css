@@ -2,8 +2,8 @@
 
 .layout-grid {
   display: grid;
-  grid-template-columns: minmax(120px, 20vw) 1fr; /* nav resizes between 120px and 20% of viewport */
-  gap: 16px;
+  grid-template-columns: minmax(120px, min(20vw, 220px)) 1fr; /* nav bar and buttons resize up to 20% of viewport */
+  gap: 16px; /* horizontal gap between nav and main content */
   height: 100vh;
   padding: 16px;
   box-sizing: border-box;
@@ -11,10 +11,9 @@
 
 .navigation-bar-grid {
   display: grid;
-  gap: 16px;       /* space between boxes */
+  gap: 16px;         /* vertical gap between boxes */
   align-self: start; /* keep boxes at top */
-  height: auto;      /* don't stretch to full column height */
-  padding-bottom: 32px;
+  height: auto;
 }
 
 .navigation-box {
@@ -25,10 +24,8 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
-  width: 100%;
-  min-width: 60px;
-  aspect-ratio: 1 / 1;
-  max-height: calc((100vh - 32px - 32px - (16px * 3)) / 4);
+  width: 100%;        /* fills the grid column */
+  aspect-ratio: 1 / 1; /* always square */
 }
 
 .main-content-box {
