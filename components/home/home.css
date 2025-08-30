@@ -1,11 +1,19 @@
-
 @import url("../../assets/global-styles/typography.css");
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: minmax(120px, min(20vw, 220px)) 1fr; /* nav bar and buttons resize up to 20% of viewport */
+  gap: 16px; /* horizontal gap between nav and main content */
+  height: 100vh;
+  padding: 16px;
+  box-sizing: border-box;
+}
 
 .navigation-bar-grid {
   display: grid;
-  grid-template-columns: 20%;   /* column takes 20% of container width */
-  gap: 16px;
-  padding: 16px;
+  gap: 16px;         /* vertical gap between boxes */
+  align-self: start; /* keep boxes at top */
+  height: auto;
 }
 
 .navigation-box {
@@ -16,15 +24,17 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
-  width: 100%;                  /* fill the grid column */
-  max-width: 200px;             /* max width */
-  min-width: 60px;              /* min width */
-  aspect-ratio: 1 / 1;          /* perfect square */
+  width: 100%;        /* fills the grid column */
+  aspect-ratio: 1 / 1; /* always square */
 }
 
-
-
-
-.main-content-grid {
-  display: grid
+.main-content-box {
+  background: var(--color-primary);
+  border-radius: 12px;
+  padding: 32px;
+  color: var(--color-text);
+  font-size: 1.3em;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
