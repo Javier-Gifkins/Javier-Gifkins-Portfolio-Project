@@ -14,6 +14,7 @@
   gap: 16px;       /* space between boxes */
   align-self: start; /* keep boxes at top */
   height: auto;      /* don't stretch to full column height */
+  padding-bottom: 32px;
 }
 
 .navigation-box {
@@ -27,6 +28,7 @@
   width: 100%;
   min-width: 60px;
   aspect-ratio: 1 / 1;
+  max-height: calc((100vh - 32px - 32px - (16px * 3)) / 4);
 }
 
 .main-content-box {
