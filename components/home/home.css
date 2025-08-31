@@ -6,7 +6,7 @@ body {
     background: var(--color-background);
 
     /* for a picture background */
-  /* background: url("../../assets/images/background.png") no-repeat center center;
+  /* background: var(--picture-background);
   background-size: cover;  */
 }
 

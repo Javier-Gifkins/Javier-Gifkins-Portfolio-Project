@@ -6,12 +6,16 @@
 
 
   /* Colours */
-  --color-primary: #38ee56;
+  --color-primary: #ee3838;
   --color-font: #333;
   --color-accent: #e74c3c;
   --color-text: #333333;
   --color-background: #f9f9f9;
   --color-background: #656565;
+
+  /* Pictures */
+  --picture-background: url("../../assets/images/background.png") no-repeat center center;
+
 
   /* Fonts */
   --nav-bar-font: Arial, Helvetica, sans-serif;
