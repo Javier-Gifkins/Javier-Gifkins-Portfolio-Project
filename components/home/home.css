@@ -34,7 +34,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: var(--nav-font-size);
+
+
+  font-family: var(--nav-bar-font);
+  font-size: var(--nav-bar-font-size);
+
   width: 100%;
   aspect-ratio: 1 / 1;
 }
@@ -48,6 +52,23 @@ body {
   width: 100%;
   height: 100%;
 }
+
+
+
+
+/* The navigation box corresponding to the page we're on */
+
+.navigation-box:nth-child(1) {    /* Selects the 1st navigation box */
+  width: calc(100% + var(--gap)); /* Makes this box a bit wider to fill the gap */
+
+  /* Font style for the current page */
+  font-family: var(--nav-bar-font-active);
+  font-size: var(--nav-bar-font-active-size);
+}
+
+
+
+
 
 .main-content-box {
   background: var(--color-primary);

@@ -13,6 +13,13 @@
   --color-background: #f9f9f9;
   --color-background: #656565;
 
+  /* Fonts */
+  --nav-bar-font: Arial, Helvetica, sans-serif;
+  --nav-bar-font-size: 1.2em;
+
+  --nav-bar-font-active: 'Courier New', Courier, monospace;
+  --nav-bar-font-active-size: 3em;
+
 
 
   /*layout variables */
