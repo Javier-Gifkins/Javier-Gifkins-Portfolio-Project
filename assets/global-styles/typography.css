@@ -1,11 +1,19 @@
-/* Colours */
+
+
+/* Exported CSS Variables */
 
 :root {
+
+
+  /* Colours */
   --color-primary: #38ee56;
   --color-font: #333;
   --color-accent: #e74c3c;
   --color-text: #333333;
   --color-background: #f9f9f9;
+  --color-background: #656565;
+
+
 
   /*layout variables */
   

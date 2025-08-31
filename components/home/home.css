@@ -1,5 +1,16 @@
 @import url("../../assets/global-styles/typography.css");
 
+
+body {
+    /* for a solid colour background */
+    background: var(--color-background);
+
+    /* for a picture background */
+  /* background: url("../../assets/images/background.png") no-repeat center center;
+  background-size: cover;  */
+}
+
+
 .layout-grid {
   display: grid;
   grid-template-columns: minmax(120px, min(20vw, 220px)) 1fr;
