@@ -17,7 +17,101 @@
           <div class="navigation-box"><a href="../contact/contact.html">Contact</a></div>
         </div>
         <div class="main-content-box">
-          Projects content goes here!
+          <!-- Projects showcase area -->
+          <h1>My Projects</h1>
+          <div class="projects-content">
+            <p>Project showcase content goes here...</p>
+          </div>
+
+
+          <!--SECTION - COMMENT HTML-->
+
+          <!-- Comment Section -->
+          <section class="comments-section">
+            <h2>Comments & Feedback</h2>
+            
+            <!-- Comment form container -->
+            <div class="comment-form-container">
+              <h3>Place Your Feedback here</h3>
+              
+              <!-- Form for new comments -->
+              <form class="comment-form" id="commentForm">
+                
+                <!-- Name input -->
+                <div class="form-group">
+                  <label for="commentName">Name *</label>
+                  <input type="text" id="commentName" name="name" required 
+                         placeholder="Your name" class="form-input">
+                </div>
+                
+                <!-- Email input -->
+                <div class="form-group">
+                  <label for="commentEmail">Email *</label>
+                  <input type="email" id="commentEmail" name="email" required 
+                         placeholder="your@email.com" class="form-input">
+                </div>
+                
+                <!-- Message textarea -->
+                <div class="form-group">
+                  <label for="commentMessage">Your Comment *</label>
+                  <textarea id="commentMessage" name="message" required 
+                           placeholder="Share your thoughts about my projects..." 
+                           rows="4" class="form-textarea"></textarea>
+                </div>
+                
+                <!-- Submit button -->
+                <button type="submit" class="btn-submit">Post Comment</button>
+              </form>
+            </div>
+
+            <!-- Existing comments display -->
+            <div class="comments-display">
+              <h3>Recent Comments</h3>
+              
+              <!-- Fake comment  -->
+              <div class="comment-item">
+                <!-- Comment header with author info -->
+                <div class="comment-header">
+                  <div class="author-avatar">JD</div>
+                  <div class="author-details">
+                    <span class="author-name">John Developer</span>
+                    <span class="comment-date">3 days ago</span>
+                  </div>
+                </div>
+                
+                <!-- Comment content -->
+                <div class="comment-content">
+                  <p>Great work on your projects! The design is clean and professional. Keep it up!</p>
+                </div>
+                
+                <!--NOTE - Include comments actions later -->
+                <!-- Comment actions -->
+                <div class="comment-actions">
+                  <button class="btn-reply" type="button">Reply</button>
+                  <button class="btn-like" type="button">👍 Like (5)</button>
+                </div>
+              </div>
+
+              <!-- Fake comment 2 -->
+              <div class="comment-item">
+                <div class="comment-header">
+                  <div class="author-avatar">SM</div>
+                  <div class="author-details">
+                    <span class="author-name">Sarah Martinez</span>
+                    <span class="comment-date">1 week ago</span>
+                  </div>
+                </div>
+                <div class="comment-content">
+                  <p>Looking ok so far!</p>
+                </div>
+                <div class="comment-actions">
+                  <button class="btn-reply" type="button">Reply</button>
+                  <button class="btn-like" type="button">👍 Like (8)</button>
+                </div>
+              </div>
+              
+            </div>
+          </section>
         </div>
       </div>
     </body>

@@ -2,10 +2,11 @@
 
 
 body {
-    /* for a solid colour background */
+    /* NOTE for a solid colour background, uncomment this */
     background: var(--color-background);
 
-    /* for a picture background */
+    /* NOTE for a picture background, uncomment this */
+
   /* background: var(--picture-background);
   background-size: cover;  */
 }
@@ -78,4 +79,225 @@ body {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
+
+  /* Allow scrolling for content that exceeds container height */
+  overflow-y: auto; 
+}
+
+/* SECTION COMMENT SECTION STYLES */
+
+/* Main page heading */
+.main-content-box h1 {
+  color: var(--color-font);
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Projects content placeholder */
+.projects-content {
+  margin-bottom: 30px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+}
+
+/* Comments section container */
+.comments-section {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Comment section headings */
+.comments-section h2,
+.comments-section h3 {
+  color: var(--color-font);
+  margin-bottom: 15px;
+}
+
+.comments-section h2 {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.comments-section h3 {
+  font-size: 1.2em;
+}
+
+/* Comment form container */
+.comment-form-container {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  margin-bottom: 30px;
+}
+
+/* Form layout */
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Form field groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Form labels */
+.form-group label {
+  color: var(--color-font);
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* Input field styling */
+.form-input {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-font);
+  font-size: 0.9em;
+}
+
+/* Textarea styling */
+.form-textarea {
+  padding: 10px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-font);
+  font-size: 0.9em;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* Input focus states */
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Submit button */
+.btn-submit {
+  background: var(--color-accent);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: var(--border-radius);
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: #c0392b;
+}
+
+/* Comments display area */
+.comments-display {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 20px;
+  border-radius: var(--border-radius);
+}
+
+/* Individual comment styling */
+.comment-item {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+  border-left: 3px solid var(--color-primary);
+}
+
+/* Comment header layout */
+.comment-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+/* Author avatar circle */
+.author-avatar {
+  width: 35px;
+  height: 35px;
+  background: var(--color-accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+/* Author details container */
+.author-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Author name */
+.author-name {
+  color: var(--color-font);
+  font-weight: bold;
+  font-size: 0.95em;
+}
+
+/* Comment date */
+.comment-date {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8em;
+}
+
+/* Comment content */
+.comment-content {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.comment-content p {
+  color: var(--color-font);
+  margin: 0;
+  font-size: 0.9em;
+}
+
+/* Comment action buttons */
+.comment-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Action button styling */
+.btn-reply,
+.btn-like {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-font);
+  padding: 6px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: all 0.3s ease;
+}
+
+.btn-reply:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-primary);
+}
+
+.btn-like:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent);
 }
