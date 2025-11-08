@@ -32,6 +32,7 @@
 
 
 /* SECTION background styling */
+
 body {
     /* NOTE: for a solid colour background */
     background: var(--color-background);

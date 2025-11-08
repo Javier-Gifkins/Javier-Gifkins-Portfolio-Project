@@ -10,3 +10,13 @@
   font-family: var(--nav-bar-font-active);
   font-size: var(--nav-bar-font-active-size);
 }
+
+/* Profile photo styles - specific to home page */
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--color-accent);
+    display: block;
+    margin: 20px auto;
+}
