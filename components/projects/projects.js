@@ -1,4 +1,4 @@
-// Simple Comments System - No Authentication Required
+// Simple Comments System - Authentication Required
 
 // Wait for page to load
 document.addEventListener('DOMContentLoaded', function() {
@@ -7,12 +7,32 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Firebase initialized:', typeof firebase !== 'undefined');
     console.log('Firestore available:', typeof db !== 'undefined');
     
+    // Check auth state
+    firebase.auth().onAuthStateChanged((user) => {
+        if (user) {
+            // User logged in - show comment form
+            document.getElementById('commentForm').style.display = 'block';
+            console.log('User logged in:', user.email);
+        } else {
+            // User not logged in - hide comment form
+            document.getElementById('commentForm').style.display = 'none';
+            document.querySelector('.comment-form-container h3').innerHTML = 
+                '<a href="../home/home.html">Login to post comments</a>';
+        }
+    });
+    
     // Load existing comments when page loads
     loadComments();
     
     // Handle comment form submission
     document.getElementById('commentForm').addEventListener('submit', function(e) {
         e.preventDefault(); // Stop form from reloading page
+        
+        const user = firebase.auth().currentUser;
+        if (!user) {
+            alert('Please login first!');
+            return;
+        }
         
         console.log('Form submitted!');
         
@@ -23,11 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log('Attempting to save:', { name, email, message });
         
-        // Save to Firestore
+        // Save to Firestore with userId
         db.collection('comments').add({
             name: name,
             email: email,
             message: message,
+            userId: user.uid,
+            userEmail: user.email,
             timestamp: firebase.firestore.FieldValue.serverTimestamp()
         })
         .then(() => {
