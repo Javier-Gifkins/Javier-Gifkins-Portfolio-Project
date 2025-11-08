@@ -1,6 +1,6 @@
 /* SECTION Skills Page Specific Styles */
 
-@import url("../../assets/global-styles/shared-layout.css");
+@import url("../../assets/global-styles/shared-settings.css");
 
 /* Active navigation highlight for Skills page (3rd navigation box) */
 .navigation-box:nth-child(3) {

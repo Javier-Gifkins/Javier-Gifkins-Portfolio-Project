@@ -1,6 +1,6 @@
 /* SECTION Contact Page Specific Styles */
 
-@import url("../../assets/global-styles/shared-layout.css");
+@import url("../../assets/global-styles/shared-settings.css");
 
 /* Active navigation highlight for Contact page (4th navigation box) */
 .navigation-box:nth-child(4) {

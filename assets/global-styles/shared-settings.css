@@ -1,11 +1,37 @@
-/* Shared Layout Styles - Common across all pages */
+/* Shared Layout & Typography Styles - Common across all pages */
 
-/* Import typography variables first */
-@import url("typography.css");
+/* SECTION CSS Variables - Typography & Layout Settings */
+
+:root {
+  /* SECTION Colours */
+  --color-primary: #070707;
+  --color-font: #ffffff;
+  --color-accent: #e74c3c;
+  --color-text: #333333;
+  --color-background: #656565;
+
+  /* Pictures */
+  --picture-background: url("../../assets/images/background.png") no-repeat center center;
+
+  /* SECTION Fonts */
+  --nav-bar-font: Arial, Helvetica, sans-serif;
+  --nav-bar-font-size: 1.2em;
+  --nav-bar-font-active: 'Courier New', Courier, monospace;
+  --nav-bar-font-active-size: 3em;
+
+  /* SECTION container edges */
+  /*NOTE uncomment this for square edges 
+  /* --border-radius: 8px;
+  --border-radius-large: 12px; */
+  --gap: 16px;
+  --nav-font-size: 1.2em;
+  --main-font-size: 1.3em;
+  --main-padding: 32px;
+}
 
 
 
-/* SECTION Body background styling */
+/* SECTION background styling */
 body {
     /* NOTE: for a solid colour background */
     background: var(--color-background);
@@ -15,7 +41,9 @@ body {
        background-size: cover; */
 }
 
-/* Main grid container for the entire page layout */
+
+/* SECTION Main content container settings */
+
 .layout-grid {
     display: grid;
     grid-template-columns: minmax(120px, min(20vw, 220px)) 1fr;
@@ -28,6 +56,21 @@ body {
     /* Smoother transition for grid column changes */
     transition: grid-template-columns 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+/* Main content area styling */
+.main-content-box {
+    background: var(--color-primary);
+    border-radius: var(--border-radius-large);
+    padding: var(--main-padding);
+    color: var(--color-text);
+    font-size: var(--main-font-size);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+/* SECTION Navigational grid settings */
 
 /* Navigation sidebar grid container */
 .navigation-bar-grid {
@@ -69,20 +112,35 @@ body {
     height: 100%;
 }
 
-/* Main content area styling */
-.main-content-box {
-    background: var(--color-primary);
-    border-radius: var(--border-radius-large);
-    padding: var(--main-padding);
-    color: var(--color-text);
-    font-size: var(--main-font-size);
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    overflow-y: auto;
+
+/* SECTION Page content style settings */
+
+.content-section {
+    margin-bottom: 30px;
 }
 
-/* Gradual responsive scaling for smoother transitions */
+.content-section h1 {
+    color: var(--color-font);
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-section h2 {
+    color: var(--color-font);
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    color: var(--color-font);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+
+/* SECTION responsive scaling for smoother transitions */
 
 /* Medium screens - start scaling down */
 @media (max-width: 1000px) {
@@ -129,5 +187,13 @@ body {
     .navigation-box:nth-child(3),
     .navigation-box:nth-child(4) {
         font-size: 1.4em !important; /* Final smaller size */
+    }
+    
+    .content-section h1 {
+        font-size: 2em;
+    }
+    
+    .content-section h2 {
+        font-size: 1.5em;
     }
 }
