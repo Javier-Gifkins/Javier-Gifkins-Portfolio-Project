@@ -5,24 +5,24 @@
 
 /*  NOTE OPTION 1: Normal Theme */
 /* Choose ONE theme by uncommenting the section below */
-:root {
+/* :root {
   --color-primary: #0d3ab6;
   --color-font: #ffffff;
   --color-accent: #3ccbe7;
   --color-text: #ff0000;
   --color-background: #656565;
-}
+} */
 
 /* NOTE OPTION 2: High Contrast Theme */
 /* Uncomment this section and comment out OPTION 1 above for high contrast */
 
-/* :root {
+:root {
   --color-primary: #000000;
   --color-font: #ff0000;
   --color-accent: #ffff00;
   --color-text: #ff00f2;
   --color-background: #ffa600;
-} */
+}
 
 
 :root {
