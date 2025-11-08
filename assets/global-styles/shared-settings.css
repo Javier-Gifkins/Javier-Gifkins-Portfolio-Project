@@ -1,15 +1,31 @@
 /* Shared Layout & Typography Styles - Common across all pages */
 
-/* SECTION CSS Variables - Typography & Layout Settings */
+/* SECTION Colour variableS  */
+
+
+/*  NOTE OPTION 1: Normal Theme */
+/* Choose ONE theme by uncommenting the section below */
+/* :root {
+  --color-primary: #0d3ab6;
+  --color-font: #ffffff;
+  --color-accent: #3ccbe7;
+  --color-text: #ff0000;
+  --color-background: #656565;
+} */
+
+/* NOTE OPTION 2: High Contrast Theme */
+/* Uncomment this section and comment out OPTION 1 above for high contrast */
 
 :root {
-  /* SECTION Colours */
-  --color-primary: #070707;
-  --color-font: #ffffff;
-  --color-accent: #e74c3c;
-  --color-text: #333333;
-  --color-background: #656565;
+  --color-primary: #000000;
+  --color-font: #ff0000;
+  --color-accent: #ffff00;
+  --color-text: #ff00f2;
+  --color-background: #ffa600;
+}
 
+
+:root {
   /* Pictures */
   --picture-background: url("../../assets/images/background.png") no-repeat center center;
 
@@ -111,6 +127,23 @@ body {
     justify-content: center;
     width: 100%;
     height: 100%;
+}
+
+/* Simple theme toggle link */
+.theme-toggle {
+    background: var(--color-accent);
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    font-size: 0.8em;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+.theme-toggle:hover {
+    opacity: 0.8;
 }
 
 
