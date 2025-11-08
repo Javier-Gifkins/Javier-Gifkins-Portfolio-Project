@@ -1,65 +1,9 @@
-@import url("../../assets/global-styles/typography.css");
+/* SECTION Contact Page Specific Styles */
 
+@import url("../../assets/global-styles/shared-layout.css");
 
-body {
-    /* for a solid colour background */
-    background: var(--color-background);
-
-    /* for a picture background */
-  /* background: var(--picture-background);
-  background-size: cover;  */
-}
-
-
-.layout-grid {
-  display: grid;
-  grid-template-columns: minmax(120px, min(20vw, 220px)) 1fr;
-  gap: var(--gap);
-  height: 100vh;
-  padding: var(--gap);
-  box-sizing: border-box;
-}
-
-.navigation-bar-grid {
-  display: grid;
-  gap: var(--gap);
-  height: 100%;           /* Fill full column height */
-  align-content: stretch; /* Stretch boxes to fill space */
-  grid-auto-rows: 1fr;    /* Each box grows/shrinks equally */
-}
-
-.navigation-box {
-  background: var(--color-primary);
-  color: var(--color-font);
-  border-radius: var(--border-radius);
-  width: 100%;
-  aspect-ratio: unset;    /* Remove aspect-ratio for vertical scaling */
-  min-height: 60px;       /* Optional: set a minimum height */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-
-  font-family: var(--nav-bar-font);
-  font-size: var(--nav-bar-font-size);
-}
-
-.navigation-box a {
-  color: inherit;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-
-
-
-/* The navigation box corresponding to the page we're on */
-
-.navigation-box:nth-child(4) {    /* Selects the 2nd navigation box */
+/* Active navigation highlight for Contact page (4th navigation box) */
+.navigation-box:nth-child(4) {
   width: calc(100% + var(--gap)); /* Makes this box a bit wider to fill the gap */
   margin-right: calc(-1 * var(--gap));
   z-index: 1;
@@ -67,19 +11,4 @@ body {
   /* Font style for the current page */
   font-family: var(--nav-bar-font-active);
   font-size: var(--nav-bar-font-active-size);
-}
-
-
-
-
-
-.main-content-box {
-  background: var(--color-primary);
-  border-radius: var(--border-radius-large);
-  padding: var(--main-padding);
-  color: var(--color-text);
-  font-size: var(--main-font-size);
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
 }

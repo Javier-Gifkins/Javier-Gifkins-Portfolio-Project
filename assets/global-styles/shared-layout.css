@@ -1,0 +1,74 @@
+/* Shared Layout Styles - Common across all pages */
+
+/* Import typography variables first */
+@import url("typography.css");
+
+
+
+/* Body background styling */
+body {
+    /* NOTE: for a solid colour background */
+    background: var(--color-background);
+
+    /* NOTE: for a picture background, uncomment below */
+    /* background: var(--picture-background);
+       background-size: cover; */
+}
+
+/* Main grid container for the entire page layout */
+.layout-grid {
+    display: grid;
+    grid-template-columns: minmax(120px, min(20vw, 220px)) 1fr;
+    gap: var(--gap);
+    height: 100vh;
+    padding: var(--gap);
+    box-sizing: border-box;
+}
+
+/* Navigation sidebar grid container */
+.navigation-bar-grid {
+    display: grid;
+    gap: var(--gap);
+    height: 100%;           /* Fill full column height */
+    align-content: stretch; /* Stretch boxes to fill space */
+    grid-auto-rows: 1fr;    /* Each box grows/shrinks equally */
+}
+
+/* Individual navigation box styling */
+.navigation-box {
+    background: var(--color-primary);
+    color: var(--color-font);
+    border-radius: var(--border-radius);
+    width: 100%;
+    aspect-ratio: unset;    /* Remove aspect-ratio for vertical scaling */
+    min-height: 60px;       /* Optional: set a minimum height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--nav-bar-font);
+    font-size: var(--nav-bar-font-size);
+}
+
+/* Navigation box link styling */
+.navigation-box a {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Main content area styling */
+.main-content-box {
+    background: var(--color-primary);
+    border-radius: var(--border-radius-large);
+    padding: var(--main-padding);
+    color: var(--color-text);
+    font-size: var(--main-font-size);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto; /* Allow scrolling for content that exceeds container height */
+}
