@@ -13,6 +13,72 @@
   font-size: var(--nav-bar-font-active-size);
 }
 
+/* SECTION Project Showcase Styles */
+
+/* Projects grid layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Individual project card */
+.project-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Project image container */
+.project-image {
+  width: 100%;
+  height: 200px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-bottom: 15px;
+  background: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Project image styling */
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Project info section */
+.project-info h3 {
+  color: var(--color-font);
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: var(--color-font);
+  line-height: 1.6;
+}
+
+/* Mobile responsive for projects */
+@media (max-width: 600px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .project-image {
+    height: 150px;
+  }
+}
+
 /* NOTE PROJECTS PAGE SPECIFIC COMMENT SECTION STYLES */
 
 /* Main page heading */
