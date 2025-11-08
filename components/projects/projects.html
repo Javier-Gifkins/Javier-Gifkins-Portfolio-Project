@@ -131,55 +131,21 @@
             </div>
 
             <!-- Existing comments display -->
-            <div class="comments-display">
+            <div class="comments-display" id="commentsDisplay">
               <h3>Recent Comments</h3>
-              
-              <!-- Fake comment  -->
-              <div class="comment-item">
-                <!-- Comment header with author info -->
-                <div class="comment-header">
-                  <div class="author-avatar">JD</div>
-                  <div class="author-details">
-                    <span class="author-name">John Developer</span>
-                    <span class="comment-date">3 days ago</span>
-                  </div>
-                </div>
-                
-                <!-- Comment content -->
-                <div class="comment-content">
-                  <p>Keep it up!</p>
-                </div>
-                
-                <!--NOTE - Include comments actions later -->
-                <!-- Comment actions -->
-                <div class="comment-actions">
-                  <button class="btn-reply" type="button">Reply</button>
-                  <button class="btn-like" type="button">👍 Like (5)</button>
-                </div>
-              </div>
-
-              <!-- Fake comment 2 -->
-              <div class="comment-item">
-                <div class="comment-header">
-                  <div class="author-avatar">SM</div>
-                  <div class="author-details">
-                    <span class="author-name">Sarah Martinez</span>
-                    <span class="comment-date">1 week ago</span>
-                  </div>
-                </div>
-                <div class="comment-content">
-                  <p>Looking ok so far!</p>
-                </div>
-                <div class="comment-actions">
-                  <button class="btn-reply" type="button">Reply</button>
-                  <button class="btn-like" type="button">👍 Like (8)</button>
-                </div>
-              </div>
-              
+              <!-- Comments will be loaded here by JavaScript -->
             </div>
           </section>
         </div>
       </div>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <!-- Firebase config -->
+    <script src="../../firebase-config.js"></script>
+
+    <!-- comment script -->
+    <script src="projects.js"></script>
     </body>
     </html>
 
