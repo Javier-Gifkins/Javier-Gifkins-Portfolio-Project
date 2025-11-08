@@ -1,11 +1,11 @@
 
 
-/* Exported CSS Variables */
+/* ANCHOR Exported CSS Variables */
 
 :root {
 
 
-  /* Colours */
+  /* SECTION Colours */
   --color-primary: #070707;
   --color-font: #ffffff;
   --color-accent: #e74c3c;
@@ -16,8 +16,8 @@
   /* Pictures */
   --picture-background: url("../../assets/images/background.png") no-repeat center center;
 
+  /* SECTION fonts */
 
-  /* Fonts */
   --nav-bar-font: Arial, Helvetica, sans-serif;
   --nav-bar-font-size: 1.2em;
 
@@ -26,8 +26,9 @@
 
 
 
-  /*layout variables */
+  /*SECTION layout variables */
   
+  /*NOTE uncomment this for square edges 
   /* --border-radius: 8px;
   --border-radius-large: 12px; */
   --gap: 16px;
