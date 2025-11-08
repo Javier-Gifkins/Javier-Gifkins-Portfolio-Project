@@ -25,7 +25,7 @@
 
 /* Individual project card */
 .project-card {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-primary);
   border-radius: var(--border-radius);
   padding: 20px;
   transition: transform 0.3s ease;
@@ -93,7 +93,7 @@
 .projects-content {
   margin-bottom: 30px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-primary);
   border-radius: var(--border-radius);
 }
 
@@ -101,7 +101,7 @@
 .comments-section {
   margin-top: 30px;
   padding-top: 25px;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: var(--color-primary);
 }
 
 /* Comment section headings */
@@ -152,9 +152,9 @@
 /* Input field styling */
 .form-input {
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-font);
   border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-font);
   color: var(--color-font);
   font-size: 0.9em;
 }
@@ -162,9 +162,9 @@
 /* Textarea styling */
 .form-textarea {
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-font);
   border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-font);
   color: var(--color-font);
   font-size: 0.9em;
   resize: vertical;
@@ -176,13 +176,13 @@
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--color-primary);
 }
 
 /* Submit button */
 .btn-submit {
   background: var(--color-accent);
-  color: white;
+  color: var(--color-font);
   border: none;
   padding: 12px 25px;
   border-radius: var(--border-radius);
@@ -194,19 +194,19 @@
 }
 
 .btn-submit:hover {
-  background: #c0392b;
+  background: var(--color-primary);
 }
 
 /* Comments display area */
 .comments-display {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--color-primary);
   padding: 20px;
   border-radius: var(--border-radius);
 }
 
 /* Individual comment styling */
 .comment-item {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-primary);
   padding: 15px;
   border-radius: var(--border-radius);
   margin-bottom: 15px;
@@ -226,7 +226,7 @@
   width: 35px;
   height: 35px;
   background: var(--color-accent);
-  color: white;
+  color: var(--color-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -251,7 +251,7 @@
 
 /* Comment date */
 .comment-date {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-primary);
   font-size: 0.8em;
 }
 
@@ -278,7 +278,7 @@
 .btn-reply,
 .btn-like {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-primary);
   color: var(--color-font);
   padding: 6px 12px;
   border-radius: var(--border-radius);
@@ -288,12 +288,12 @@
 }
 
 .btn-reply:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-primary);
   border-color: var(--color-primary);
 }
 
 .btn-like:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-primary);
   border-color: var(--color-accent);
 }
 
@@ -311,7 +311,7 @@
 .projects-content {
   margin-bottom: 30px;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.1);
+  background:var(--color-primary);
   border-radius: var(--border-radius);
 }
 
@@ -319,7 +319,7 @@
 .comments-section {
   margin-top: 30px;
   padding-top: 25px;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid var(--color-primary);
 }
 
 /* Comment section headings */
@@ -340,7 +340,7 @@
 
 /* Comment form container */
 .comment-form-container {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--color-primary);
   padding: 20px;
   border-radius: var(--border-radius);
   margin-bottom: 30px;
@@ -370,9 +370,9 @@
 /* Input field styling */
 .form-input {
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-font);
   border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-font);
   color: var(--color-font);
   font-size: 0.9em;
 }
@@ -380,9 +380,9 @@
 /* Textarea styling */
 .form-textarea {
   padding: 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-font);
   border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-font);
   color: var(--color-font);
   font-size: 0.9em;
   resize: vertical;
@@ -394,13 +394,13 @@
 .form-textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--color-font);
 }
 
 /* Submit button */
 .btn-submit {
   background: var(--color-accent);
-  color: white;
+  color: var(--color-font);
   border: none;
   padding: 12px 25px;
   border-radius: var(--border-radius);
@@ -412,19 +412,19 @@
 }
 
 .btn-submit:hover {
-  background: #c0392b;
+  background: var(--color-text);
 }
 
 /* Comments display area */
 .comments-display {
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--color-font);
   padding: 20px;
   border-radius: var(--border-radius);
 }
 
 /* Individual comment styling */
 .comment-item {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--color-font);
   padding: 15px;
   border-radius: var(--border-radius);
   margin-bottom: 15px;
@@ -444,7 +444,7 @@
   width: 35px;
   height: 35px;
   background: var(--color-accent);
-  color: white;
+  color: var(--color-font);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -469,7 +469,7 @@
 
 /* Comment date */
 .comment-date {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-font);
   font-size: 0.8em;
 }
 
@@ -496,7 +496,7 @@
 .btn-reply,
 .btn-like {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-font);
   color: var(--color-font);
   padding: 6px 12px;
   border-radius: var(--border-radius);
@@ -506,11 +506,11 @@
 }
 
 .btn-reply:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-font);
   border-color: var(--color-primary);
 }
 
 .btn-like:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-font);
   border-color: var(--color-accent);
 }
