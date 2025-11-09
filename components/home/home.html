@@ -20,41 +20,69 @@
           <div class="navigation-box"><a href="../contact/contact.html">Contact</a></div>
         </div>
         <div class="main-content-box">
-          <!-- Page Title -->
-          <h1>Welcome to My Portfolio</h1>
+          <!-- Hero Section -->
+          <div class="hero-section">
+            <h1>Welcome to My Website</h1>
+            <p class="hero-subtitle">This Portfolio has been created as part of my WEB504 Assessment</p>
+          </div>
           
           <!-- Simple Auth Section -->
-          <section class="content-section" id="authSection">
+          <section class="content-section auth-section" id="authSection">
             <h2>Login / Sign Up</h2>
-            <input type="email" id="authEmail" placeholder="Email" class="form-input">
-            <input type="password" id="authPassword" placeholder="Password" class="form-input">
-            <button onclick="login()" class="btn-submit">Login</button>
-            <button onclick="signup()" class="btn-submit">Sign Up</button>
-            <button onclick="continueWithoutLogin()" class="btn-submit">Continue Without Login</button>
-            <p id="authMessage"></p>
+            <div class="auth-form">
+              <input type="email" id="authEmail" placeholder="Email" class="form-input">
+              <input type="password" id="authPassword" placeholder="Password" class="form-input">
+              <div class="button-group">
+                <button onclick="login()" class="btn-submit">Login</button>
+                <button onclick="signup()" class="btn-submit">Sign Up</button>
+                <button onclick="continueWithoutLogin()" class="btn-submit btn-secondary">Continue Without Login</button>
+              </div>
+              <p id="authMessage"></p>
+            </div>
           </section>
 
           <!-- User Info (hidden by default) -->
           <section class="content-section" id="userSection" style="display:none;">
-            <h2>Welcome, <span id="userEmail"></span>!</h2>
-            <button onclick="logout()" class="btn-submit">Logout</button>
+            <div class="user-welcome">
+              <h2>Welcome back, <span id="userEmail"></span>!</h2>
+              <button onclick="logout()" class="btn-submit">Logout</button>
+            </div>
           </section>
           
-          <!-- Simple content sections -->
-          <section class="content-section">
-            <h2>About Me</h2>
-            
-            <!-- NOTE add profile picture later -->
-            <!-- Profile Picture -->
-            <img src="../../assets/images/profile-photo.jpg" alt="Profile Photo" class="profile-photo">
-            
-            <p>Your bio content goes here. Add your personal introduction and background.</p>
-            <p>More details about your experience and interests.</p>
+          <!-- About Section with Profile -->
+          <section class="content-section about-section">
+            <div class="about-content">
+
+              <!-- NOTE add profile picture later -->
+              <!-- Profile Picture -->
+              <img src="../../assets/images/profile-photo.jpg" alt="Profile Photo" class="profile-photo">
+              
+              <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm a 27 year old New Zealander. Over the past 10 years, I have honed valuable skills in communication, teamwork, and managing high-pressure environments in my roles within the hospitality industry but recently looking to branch out to try something new. </p>
+                <h3>Background</h3>
+                <p>Studies level 4 culinary arts right here at NMIT, foundational techniques, complex skills, and industry practices.</p>
+              </div>
+            </div>
           </section>
 
-          <section class="content-section">
-            <h2>What I Do</h2>
-            <p>Description of your skills and services.</p>
+          <!-- What I Do Section -->
+          <section class="content-section highlight-section">
+            <h2>What I'm Doing'</h2>
+            <div class="features-grid">
+              <div class="feature-box">
+                <h3>Learning Web Development</h3>
+                <p>Learning how to Create responsive and modern web applications</p>
+              </div>
+              <div class="feature-box">
+                <h3>Design</h3>
+                <p>Crafting intuitive and accessable user interfaces.</p>
+              </div>
+              <div class="feature-box">
+                <h3>Enjoys the litle details</h3>
+                <p>Likes to find solutions to complex problems, like when all the small details come together to achieve something.</p>
+              </div>
+            </div>
           </section>
         </div>
       </div>

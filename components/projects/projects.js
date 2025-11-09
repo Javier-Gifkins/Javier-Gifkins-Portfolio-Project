@@ -1,6 +1,4 @@
-// Simple Comments System - Authentication Required
-
-// Wait for page to load
+/// Wait for page to load
 document.addEventListener('DOMContentLoaded', function() {
     
     // Test Firebase connection
