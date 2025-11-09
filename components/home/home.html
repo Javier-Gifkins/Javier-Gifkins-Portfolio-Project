@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="../../assets/global-styles/shared-settings.css">
         <!-- Import page-specific styles -->
         <link rel="stylesheet" href="home.css"> 
-
     </head>
     <body>
       <div class="layout-grid">
@@ -20,10 +19,14 @@
           <div class="navigation-box"><a href="../contact/contact.html">Contact</a></div>
         </div>
         <div class="main-content-box">
+          <!-- Theme Toggle Button -->
+          <button id="themeToggleBtn" class="theme-toggle-btn" onclick="toggleTheme()">High Contrast</button>
+          
           <!-- Hero Section -->
           <div class="hero-section">
             <h1>Welcome to My Website</h1>
             <p class="hero-subtitle">This Portfolio has been created as part of my WEB504 Assessment</p>
+            <p><a href="https://github.com/Javier-Gifkins/Javier-Gifkins-Portfolio-Project" target="_blank">Project GitHub Repository</a></p>
           </div>
           
           <!-- Simple Auth Section -->
@@ -81,6 +84,9 @@
           </section>
         </div>
       </div>
+    
+    <!-- Theme Toggle Script -->
+    <script src="../../utils/theme-toggle.js"></script>
     
     <!-- Firebase Scripts -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>

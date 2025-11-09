@@ -2,31 +2,16 @@
 
 /* SECTION Colour variableS  */
 
-
-/*  NOTE OPTION 1: Normal Theme */
-/* Choose ONE theme by uncommenting the section below */
+/* Default theme values - controlled by JavaScript theme toggle */
 :root {
-  --color-primary: #0d3ab6;
-  --color-font: #ffffff;
-  --color-accent: #3ccbe7;
-  --color-text: #ff0000;
-  --color-background: #656565;
-  --color-link: #7500cf;
-}
-
-/* NOTE OPTION 2: High Contrast Theme */
-/* Uncomment this section and comment out OPTION 1 above for high contrast */
-
-/* :root {
+  /* Color variables - controlled by theme toggle */
   --color-primary: #000000;
   --color-font: #ff0000;
   --color-accent: #ffff00;
   --color-text: #ff00f2;
   --color-background: #ffa600;
-} */
+  --color-link: #ffffff;
 
-
-:root {
   /* Pictures */
   --picture-background: url("../../assets/images/background.png") no-repeat center center;
 
@@ -96,6 +81,27 @@ a:hover {
     height: 100%;
     box-sizing: border-box;
     overflow-y: auto;
+    position: relative;
+}
+
+/* Theme toggle button */
+.theme-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background: var(--color-accent);
+    color: var(--color-font);
+    border: 2px solid var(--color-font);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.theme-toggle-btn:hover {
+    opacity: 0.8;
 }
 
 /* SECTION Navigational grid settings */
