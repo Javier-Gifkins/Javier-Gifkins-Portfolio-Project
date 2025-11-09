@@ -7,17 +7,22 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Firebase initialized:', typeof firebase !== 'undefined');
     console.log('Firestore available:', typeof db !== 'undefined');
     
+    // Initially show form, will hide if not logged in
+    const commentForm = document.getElementById('commentForm');
+    const formHeading = document.querySelector('.comment-form-container h3');
+    
     // Check auth state
     firebase.auth().onAuthStateChanged((user) => {
         if (user) {
             // User logged in - show comment form
-            document.getElementById('commentForm').style.display = 'block';
+            commentForm.style.display = 'block';
+            formHeading.innerHTML = 'Place Your Feedback here';
             console.log('User logged in:', user.email);
         } else {
             // User not logged in - hide comment form
-            document.getElementById('commentForm').style.display = 'none';
-            document.querySelector('.comment-form-container h3').innerHTML = 
-                '<a href="../home/home.html">Login to post comments</a>';
+            commentForm.style.display = 'none';
+            formHeading.innerHTML = '<a href="../home/home.html">Login to post comments</a>';
+            console.log('Not logged in');
         }
     });
     

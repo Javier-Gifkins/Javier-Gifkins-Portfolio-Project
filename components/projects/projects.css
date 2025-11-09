@@ -2,6 +2,10 @@
 
 @import url("../../assets/global-styles/shared-settings.css");
 
+/* SECTION Projects Page Specific Styles */
+
+@import url("../../assets/global-styles/shared-settings.css");
+
 /* Active navigation highlight for Projects page (2nd navigation box) */
 .navigation-box:nth-child(2) {
   width: calc(100% + var(--gap)); /* Makes this box a bit wider to fill the gap */

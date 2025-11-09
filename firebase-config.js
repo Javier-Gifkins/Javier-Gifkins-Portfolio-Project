@@ -12,10 +12,15 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 // Initialize Firestore
 const db = firebase.firestore();
 
 // Initialize Auth
 const auth = firebase.auth();
+
+// Set persistence BEFORE any auth operations
+auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
