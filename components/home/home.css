@@ -32,10 +32,11 @@
 
 /* Auth Section Styling */
 .auth-section {
-  background: var(--color-background);
+  background: var(--color-primary);
   padding: 30px;
   border-radius: var(--border-radius-large);
   margin-bottom: 30px;
+  border: 2px solid var(--color-accent);
 }
 
 .auth-form {
@@ -49,7 +50,7 @@
   margin: 10px 0;
   border: 2px solid var(--color-accent);
   border-radius: var(--border-radius);
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-background);
   color: var(--color-font);
   font-size: 1em;
   box-sizing: border-box;
@@ -91,8 +92,9 @@
 .user-welcome {
   text-align: center;
   padding: 20px;
-  background: var(--color-background);
+  background: var(--color-primary);
   border-radius: var(--border-radius-large);
+  border: 2px solid var(--color-accent);
 }
 
 .user-welcome h2 {
@@ -140,9 +142,10 @@
 
 /* Highlight Section for What I Do */
 .highlight-section {
-  background: var(--color-background);
+  background: var(--color-primary);
   padding: 30px;
   border-radius: var(--border-radius-large);
+  border: 2px solid var(--color-accent);
 }
 
 .highlight-section h2 {
@@ -164,13 +167,13 @@
   padding: 25px;
   border-radius: var(--border-radius);
   text-align: center;
-  border: 1px solid var(--color-accent);
-  transition: transform 0.3s, var(--color-backgroundbackground) 0.3s;
+  border: 2px solid var(--color-accent);
+  transition: transform 0.3s;
 }
 
 .feature-box:hover {
   transform: translateY(-5px);
-  background: var(--color-background);
+  border-color: var(--color-link);
 }
 
 .feature-box h3 {
