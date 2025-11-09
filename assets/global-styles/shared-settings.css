@@ -11,6 +11,7 @@
   --color-accent: #3ccbe7;
   --color-text: #ff0000;
   --color-background: #656565;
+  --color-link: #e73cc2;
 }
 
 /* NOTE OPTION 2: High Contrast Theme */
@@ -56,6 +57,16 @@ body {
     /* NOTE: for a picture background, uncomment below */
     /* background: var(--picture-background);
        background-size: cover; */
+}
+
+/* SECTION Link styling */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 
