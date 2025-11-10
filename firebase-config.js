@@ -1,5 +1,4 @@
 // Firebase Configuration for Portfolio Comments
-// Using compat version for simplicity
 
 const firebaseConfig = {
   apiKey: "AIzaSyDIuCtZ-3AFVy7G1BVpQFD8GkxUhx-g_0Y",
@@ -16,11 +15,7 @@ if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
-// Initialize Firestore
 const db = firebase.firestore();
-
-// Initialize Auth
 const auth = firebase.auth();
 
-// Set persistence BEFORE any auth operations
 auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);

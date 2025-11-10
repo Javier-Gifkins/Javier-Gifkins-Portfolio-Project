@@ -1,5 +1,4 @@
 // Theme Toggle Functionality
-console.log('Theme toggle script loaded');
 
 // Define the two themes
 const themes = {
@@ -16,15 +15,13 @@ const themes = {
     '--color-font': '#ff0000',
     '--color-accent': '#ffff00',
     '--color-text': '#ff00f2',
-    '--color-background': '#ffa600',
-    '--color-link': '#ffffff'
+    '--color-background': '#ffa600'
   }
 };
 
-// Load saved theme preference or default to highContrast
+// Load saved theme preference or default to normal
 function loadTheme() {
   const savedTheme = localStorage.getItem('theme') || 'highContrast';
-  console.log('Loading theme:', savedTheme);
   applyTheme(savedTheme);
 }
 
@@ -34,13 +31,11 @@ function applyTheme(themeName) {
   const root = document.documentElement;
   
   for (const [property, value] of Object.entries(theme)) {
-    root.style.setProperty(property, value, 'important');
+    root.style.setProperty(property, value);
   }
   
   localStorage.setItem('theme', themeName);
   updateButtonText(themeName);
-  
-  console.log('Theme applied:', themeName); // Debug log
 }
 
 // Toggle between themes
@@ -55,9 +50,6 @@ function updateButtonText(themeName) {
   const button = document.getElementById('themeToggleBtn');
   if (button) {
     button.textContent = themeName === 'normal' ? 'High Contrast' : 'Normal';
-    console.log('Button text updated to:', button.textContent);
-  } else {
-    console.log('Button not found!');
   }
 }
 

@@ -1,17 +1,28 @@
 /* Shared Layout & Typography Styles - Common across all pages */
 
-/* SECTION Colour variableS  */
 
-/* Default theme values - controlled by JavaScript theme toggle */
+/* SECTION Colour variableS  */
+/*  NOTE OPTION 1: Normal Theme */
 :root {
-  /* Color variables - controlled by theme toggle */
+   --color-primary: #0d3ab6;
+  --color-font: #ffffff;
+  --color-accent: #3ccbe7;
+  --color-text: #ff0000;
+  --color-background: #656565;
+  --color-link: #ffffff; 
+}
+
+/* NOTE OPTION 2: High Contrast Theme */
+:root {
   --color-primary: #000000;
   --color-font: #ff0000;
   --color-accent: #ffff00;
   --color-text: #ff00f2;
   --color-background: #ffa600;
-  --color-link: #ffffff;
+}
 
+
+:root {
   /* Pictures */
   --picture-background: url("../../assets/images/background.png") no-repeat center center;
 
@@ -22,7 +33,7 @@
   --nav-bar-font-active-size: 3em;
 
   /* SECTION container edges */
-  /*NOTE uncomment this for square edges 
+  /*NOTE comment this out for square edges 
   /* --border-radius: 8px;
   --border-radius-large: 12px; */
   --gap: 16px;
