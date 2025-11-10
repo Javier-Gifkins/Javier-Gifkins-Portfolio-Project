@@ -298,3 +298,67 @@
   background: var(--color-accent);
   border-color: var(--color-accent);
 }
+
+/* Edit comment button */
+.edit-comment-btn {
+  background: var(--color-accent);
+  border: none;
+  color: var(--color-font);
+  padding: 5px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.85em;
+  margin-left: auto;
+  transition: opacity 0.3s;
+}
+
+.edit-comment-btn:hover {
+  opacity: 0.8;
+}
+
+/* Edit textarea */
+.edit-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--border-radius);
+  background: var(--color-background);
+  color: var(--color-font);
+  font-size: 0.9em;
+  font-family: inherit;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+/* Edit action buttons */
+.edit-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: opacity 0.3s;
+}
+
+.save-btn {
+  background: var(--color-accent);
+  color: var(--color-font);
+}
+
+.cancel-btn {
+  background: var(--color-link);
+  color: var(--color-font);
+}
+
+.save-btn:hover,
+.cancel-btn:hover {
+  opacity: 0.8;
+}

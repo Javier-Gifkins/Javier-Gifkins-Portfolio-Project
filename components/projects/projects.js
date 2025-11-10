@@ -88,7 +88,7 @@ function loadComments() {
             // Add each comment
             querySnapshot.forEach((doc) => {
                 const data = doc.data();
-                const commentHTML = createCommentHTML(data);
+                const commentHTML = createCommentHTML(data, doc.id);
                 commentsContainer.innerHTML += commentHTML;
             });
         })
@@ -98,7 +98,7 @@ function loadComments() {
 }
 
 // Function to create HTML for a single comment
-function createCommentHTML(data) {
+function createCommentHTML(data, docId) {
     // Get initials from name
     const initials = data.name.split(' ').map(word => word[0]).join('').toUpperCase();
     
@@ -109,14 +109,22 @@ function createCommentHTML(data) {
         timeString = formatDate(date);
     }
     
+    // Check if current user owns this comment
+    const currentUser = firebase.auth().currentUser;
+    const isOwner = currentUser && data.userId === currentUser.uid;
+    
+    // Add edit button if user owns the comment
+    const editButton = isOwner ? `<button class="edit-comment-btn" onclick="editComment('${docId}', '${data.message.replace(/'/g, "\\'")}')">Edit</button>` : '';
+    
     return `
-        <div class="comment-item">
+        <div class="comment-item" data-id="${docId}">
             <div class="comment-header">
                 <div class="author-avatar">${initials}</div>
                 <div class="author-details">
                     <span class="author-name">${data.name}</span>
                     <span class="comment-date">${timeString}</span>
                 </div>
+                ${editButton}
             </div>
             <div class="comment-content">
                 <p>${data.message}</p>
@@ -140,3 +148,50 @@ function formatDate(date) {
     
     return date.toLocaleDateString();
 }
+
+// Edit comment function
+function editComment(docId, currentMessage) {
+    const commentItem = document.querySelector(`[data-id="${docId}"]`);
+    const contentDiv = commentItem.querySelector('.comment-content');
+    
+    // Replace paragraph with textarea
+    contentDiv.innerHTML = `
+        <textarea id="editTextarea-${docId}" class="edit-textarea">${currentMessage}</textarea>
+        <div class="edit-actions">
+            <button onclick="saveComment('${docId}')" class="save-btn">Save</button>
+            <button onclick="cancelEdit('${docId}', '${currentMessage.replace(/'/g, "\\'")}'))" class="cancel-btn">Cancel</button>
+        </div>
+    `;
+}
+
+// Save edited comment
+function saveComment(docId) {
+    const newMessage = document.getElementById(`editTextarea-${docId}`).value.trim();
+    
+    if (!newMessage) {
+        alert('Comment cannot be empty!');
+        return;
+    }
+    
+    db.collection('comments').doc(docId).update({
+        message: newMessage
+    })
+    .then(() => {
+        alert('Comment updated successfully!');
+        loadComments();
+    })
+    .catch((error) => {
+        console.error('Error updating comment:', error);
+        alert('Error updating comment: ' + error.message);
+    });
+}
+
+// Cancel edit
+function cancelEdit(docId, originalMessage) {
+    const commentItem = document.querySelector(`[data-id="${docId}"]`);
+    const contentDiv = commentItem.querySelector('.comment-content');
+    
+    // Restore original paragraph
+    contentDiv.innerHTML = `<p>${originalMessage}</p>`;
+}
+
