@@ -113,8 +113,11 @@ function createCommentHTML(data, docId) {
     const currentUser = firebase.auth().currentUser;
     const isOwner = currentUser && data.userId === currentUser.uid;
     
-    // Add edit button if user owns the comment
-    const editButton = isOwner ? `<button class="edit-comment-btn" onclick="editComment('${docId}', '${data.message.replace(/'/g, "\\'")}')">Edit</button>` : '';
+    // Add edit and delete buttons if user owns the comment
+    const actionButtons = isOwner ? `
+        <button class="edit-comment-btn" onclick="editComment('${docId}', '${data.message.replace(/'/g, "\\'")}')">Edit</button>
+        <button class="delete-comment-btn" onclick="deleteComment('${docId}')">Delete</button>
+    ` : '';
     
     return `
         <div class="comment-item" data-id="${docId}">
@@ -124,7 +127,9 @@ function createCommentHTML(data, docId) {
                     <span class="author-name">${data.name}</span>
                     <span class="comment-date">${timeString}</span>
                 </div>
-                ${editButton}
+                <div class="comment-actions-buttons">
+                    ${actionButtons}
+                </div>
             </div>
             <div class="comment-content">
                 <p>${data.message}</p>
@@ -193,5 +198,22 @@ function cancelEdit(docId, originalMessage) {
     
     // Restore original paragraph
     contentDiv.innerHTML = `<p>${originalMessage}</p>`;
+}
+
+// Delete comment function
+function deleteComment(docId) {
+    if (!confirm('Are you sure you want to delete this comment? This cannot be undone.')) {
+        return;
+    }
+    
+    db.collection('comments').doc(docId).delete()
+    .then(() => {
+        alert('Comment deleted successfully!');
+        loadComments();
+    })
+    .catch((error) => {
+        console.error('Error deleting comment:', error);
+        alert('Error deleting comment: ' + error.message);
+    });
 }
 

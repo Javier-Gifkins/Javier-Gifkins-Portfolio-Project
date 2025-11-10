@@ -8,14 +8,16 @@ const themes = {
     '--color-accent': '#3ccbe7',
     '--color-text': '#ff0000',
     '--color-background': '#656565',
-    '--color-link': '#ffffff'
+    '--color-link': '#ffffff',
+    '--color-delete': '#c74444'
   },
   highContrast: {
     '--color-primary': '#000000',
     '--color-font': '#ff0000',
     '--color-accent': '#ffff00',
     '--color-text': '#ff00f2',
-    '--color-background': '#ffa600'
+    '--color-background': '#ffa600',
+    '--color-delete': '#ff0000'
   }
 };
 

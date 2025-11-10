@@ -9,7 +9,8 @@
   --color-accent: #3ccbe7;
   --color-text: #ff0000;
   --color-background: #656565;
-  --color-link: #ffffff; 
+  --color-link: #ffffff;
+  --color-delete: #c74444; /* Desaturated red for delete buttons */
 }
 
 /* NOTE OPTION 2: High Contrast Theme */
@@ -19,6 +20,7 @@
   --color-accent: #ffff00;
   --color-text: #ff00f2;
   --color-background: #ffa600;
+  --color-delete: #ff0000; /* Bright red for high contrast */
 }
 
 

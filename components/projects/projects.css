@@ -299,6 +299,13 @@
   border-color: var(--color-accent);
 }
 
+/* Comment action buttons container */
+.comment-actions-buttons {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
 /* Edit comment button */
 .edit-comment-btn {
   background: var(--color-accent);
@@ -308,11 +315,27 @@
   border-radius: var(--border-radius);
   cursor: pointer;
   font-size: 0.85em;
-  margin-left: auto;
   transition: opacity 0.3s;
 }
 
 .edit-comment-btn:hover {
+  opacity: 0.8;
+}
+
+/* Delete comment button */
+.delete-comment-btn {
+  background: var(--color-delete);
+  border: none;
+  color: var(--color-font);
+  padding: 5px 12px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.85em;
+  transition: opacity 0.3s;
+  font-weight: bold;
+}
+
+.delete-comment-btn:hover {
   opacity: 0.8;
 }
 
